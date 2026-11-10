@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a2218" />
+    <meta name="description" content="喝水怪獸：特攝哥吉拉，每天五瓶水，喝掉一瓶圖示就少一瓶。" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="喝水怪獸" />
+    <title>喝水怪獸</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>喝水怪獸</h1>
+        <p>一瓶 575 mL，一天 3000 cc</p>
+      </header>
+
+      <section class="stage" aria-hidden="true">
+        <div class="set" id="set">
+          <div class="city">
+            <div class="tower" data-side="a" style="--h: 72%; --lean: -14deg"></div>
+            <div class="tower tower-spire" data-side="a" style="--h: 96%; --lean: 9deg"></div>
+            <div class="tower" data-side="a" style="--h: 58%; --lean: -7deg"></div>
+            <div class="tower" data-side="a" style="--h: 84%; --lean: 12deg"></div>
+            <div class="tower" data-side="b" style="--h: 90%; --lean: -11deg"></div>
+            <div class="tower tower-spire" data-side="b" style="--h: 64%; --lean: 8deg"></div>
+            <div class="tower" data-side="b" style="--h: 100%; --lean: -8deg"></div>
+            <div class="tower" data-side="b" style="--h: 76%; --lean: 13deg"></div>
+          </div>
+          <div class="spotlight"></div>
+          <p class="sleep-note">冬眠</p>
+        </div>
+        <svg class="monster" id="monster" viewBox="0 0 280 320">
+          <title>喝水怪獸</title>
+          <ellipse class="shadow" cx="150" cy="292" rx="78" ry="12" />
+          <path class="tail" d="M96 214 C58 206 24 228 30 258 C36 278 66 276 82 256 C94 240 104 230 118 222 Z" />
+          <g class="plates plates-back">
+            <path transform="translate(118 176) scale(0.55)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
+            <path transform="translate(162 176) scale(0.55)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
+          </g>
+          <ellipse class="leg" cx="112" cy="262" rx="30" ry="24" />
+          <ellipse class="leg" cx="186" cy="262" rx="30" ry="24" />
+          <path class="claw" d="M90 276 h10 l-2 10 Z M104 280 h10 l-2 10 Z M118 276 h10 l-2 8 Z" />
+          <path class="claw" d="M164 276 h10 l-2 10 Z M178 280 h10 l-2 10 Z M192 276 h10 l-2 8 Z" />
+          <path class="hide" d="M140 118 C186 120 208 154 206 190 C204 230 182 258 140 262 C98 258 76 230 74 190 C72 154 94 120 140 118 Z" />
+          <ellipse class="hide-spot" cx="168" cy="176" rx="10" ry="7" />
+          <ellipse class="hide-spot" cx="108" cy="198" rx="8" ry="6" />
+          <g id="belly">
+            <ellipse class="belly-main" cx="140" cy="206" rx="40" ry="32" />
+            <path class="belly-seam" d="M114 198 Q140 208 166 198" />
+            <path class="belly-seam" d="M118 216 Q140 226 162 216" />
+          </g>
+          <g class="arms">
+            <path class="arm" d="M84 156 C64 142 38 150 34 170 C30 192 48 206 70 198 C86 192 96 176 92 162 Z" />
+            <path class="hand-claw" d="M32 162 l-16 -4 12 8 Z M28 174 l-18 2 14 8 Z M34 186 l-14 8 12 2 Z" />
+            <path class="arm" d="M196 156 C216 142 242 150 246 170 C250 192 232 206 210 198 C194 192 184 176 188 162 Z" />
+            <path class="hand-claw" d="M248 162 l16 -4 -12 8 Z M252 174 l18 2 -14 8 Z M246 186 l14 8 -12 2 Z" />
+          </g>
+          <g class="plates">
+            <path transform="translate(108 92) scale(1.05)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
+            <path transform="translate(172 92) scale(1.05)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
+            <path transform="translate(140 78) scale(1.45)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
+          </g>
+          <g class="head">
+            <ellipse class="cranium" cx="140" cy="104" rx="52" ry="42" />
+            <ellipse class="snout" cx="140" cy="126" rx="36" ry="24" />
+            <ellipse class="shine" cx="118" cy="86" rx="16" ry="8" />
+            <path class="brow" d="M96 92 Q112 74 130 90" />
+            <path class="brow" d="M184 92 Q168 74 150 90" />
+            <g class="eyes-open">
+              <ellipse class="eye" cx="116" cy="102" rx="8" ry="7" />
+              <ellipse class="eye" cx="164" cy="102" rx="8" ry="7" />
+              <ellipse class="pupil" cx="116" cy="103" rx="3.2" ry="3.4" />
+              <ellipse class="pupil" cx="164" cy="103" rx="3.2" ry="3.4" />
+            </g>
+            <g class="eyes-shut">
+              <path d="M104 104 Q116 112 128 104" />
+              <path d="M152 104 Q164 112 176 104" />
+            </g>
+            <ellipse class="nostril" cx="128" cy="124" rx="3" ry="2" />
+            <ellipse class="nostril" cx="152" cy="124" rx="3" ry="2" />
+            <path class="mouth-pit" d="M112 128 h56 v12 q-28 18-56 0 Z" />
+            <g class="jaw">
+              <path d="M106 126 Q140 162 174 126 Q156 138 140 140 Q124 138 106 126 Z" />
+              <path class="tooth" d="M118 128 h8 l-2 7 Z M134 130 h8 l-2 7 Z M150 128 h8 l-2 7 Z" />
+            </g>
+          </g>
+          <g class="beam">
+            <path class="beam-glow" d="M166 128 L236 86 L214 126 L274 108 L262 164 L206 150 L166 152 Z" />
+            <path class="beam-core" d="M168 134 L228 112 L246 132 L220 142 L168 144 Z" />
+          </g>
+          <g class="beam-red">
+            <path class="beam-red-glow" d="M158 118 L248 28 L214 96 L318 48 L300 196 L196 168 L154 164 Z" />
+            <path class="beam-red-core" d="M164 126 L236 62 L270 108 L236 132 L164 150 Z" />
+          </g>
+        </svg>
+      </section>
+
+      <section class="stats">
+        <p class="score"><span id="bottle-count">0</span><small>瓶已喝</small></p>
+        <p class="ml" id="ml-line">0 / 3000 cc</p>
+        <div
+          class="bar"
+          id="progress"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="3000"
+          aria-valuenow="0"
+          aria-label="今天喝水進度"
+        >
+          <div class="bar-fill" id="bar-fill"></div>
+        </div>
+        <p class="remain" id="remain">還差 3000 cc</p>
+        <p class="sr-only" id="live" aria-live="polite"></p>
+      </section>
+
+      <section class="bottles" aria-label="今天的五瓶水">
+        <p class="bottles-label" id="bottle-label">還有 5 瓶</p>
+        <ol id="bottle-row"></ol>
+      </section>
+
+      <section class="history">
+        <h2>最近 7 天</h2>
+        <ol class="week" id="week"></ol>
+      </section>
+
+      <section class="actions">
+        <button type="button" class="btn btn-reset" id="reset" disabled>重新計算</button>
+        <button type="button" class="btn btn-undo" id="undo" disabled>收回一瓶</button>
+        <button type="button" class="btn btn-add" id="add">喝了一瓶</button>
+      </section>
+    </main>
+    <script src="app.js" defer></script>
+  </body>
+</html>
