@@ -218,7 +218,13 @@ h1 span { color: #7e9568; }
   font-size: 11px;
   letter-spacing: 2px;
 }
-.scene-wrap.is-sleep .sleep-note { display: block; }
+.scene-wrap.is-mecha .sleep-note {
+  display: block;
+  color: #243240;
+  background: #e8eef2;
+  border-color: #aeb9c2;
+}
+.sleep-note[hidden] { display: none !important; }
 .monster-name {
   font-family: "Courier New", monospace;
   font-size: 11px;

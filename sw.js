@@ -1,4 +1,4 @@
-const CACHE = "water-monster-v6";
+const CACHE = "water-monster-v14";
 const ASSETS = [
   "./",
   "./index.html",
