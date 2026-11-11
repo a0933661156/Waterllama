@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#1a2218" />
-    <meta name="description" content="喝水怪獸：特攝哥吉拉，每天五瓶水，喝掉一瓶圖示就少一瓶。" />
+    <meta name="theme-color" content="#f5f5ee" />
+    <meta name="description" content="喝水怪獸：淺色像素日記。一瓶 575 mL，一天 3000 cc。" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="喝水怪獸" />
@@ -15,126 +15,154 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app">
-      <header class="header">
-        <h1>喝水怪獸</h1>
-        <p>一瓶 575 mL，一天 3000 cc</p>
-      </header>
+    <header class="site-header">
+      <a href="#game" class="brand" aria-label="喝水怪獸首頁">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path fill="currentColor" d="M14 3h12v3h4v8H20v4h5v3h-6v4h5v4H9v-4H5v-4H1v-6h3v3h4v-6h3V7h3V3Z"/><path fill="#5c724b" d="M23 7h3v3h-3zM16 15h3v7h-3z"/></svg>
+        </span>
+        <span class="brand-name">WATER<span>GODZILLA</span></span>
+        <span class="brand-divider"></span>
+        <span class="brand-chinese">喝水怪獸</span>
+      </a>
+    </header>
 
-      <section class="stage" aria-hidden="true">
-        <div class="set" id="set">
-          <div class="city">
-            <div class="tower" data-side="a" style="--h: 72%; --lean: -14deg"></div>
-            <div class="tower tower-spire" data-side="a" style="--h: 96%; --lean: 9deg"></div>
-            <div class="tower" data-side="a" style="--h: 58%; --lean: -7deg"></div>
-            <div class="tower" data-side="a" style="--h: 84%; --lean: 12deg"></div>
-            <div class="tower" data-side="b" style="--h: 90%; --lean: -11deg"></div>
-            <div class="tower tower-spire" data-side="b" style="--h: 64%; --lean: 8deg"></div>
-            <div class="tower" data-side="b" style="--h: 100%; --lean: -8deg"></div>
-            <div class="tower" data-side="b" style="--h: 76%; --lean: 13deg"></div>
+    <main class="page-shell">
+      <section class="intro" id="game">
+        <div>
+          <p class="eyebrow"><span class="tiny-pixel"></span> A LITTLE WATER. A BIG ADVENTURE.</p>
+          <h1>喝一瓶水，<span>喚醒你的怪獸。</span></h1>
+          <p class="intro-copy">一瓶 575 ml，每天的參考量是 3000 cc。</p>
+        </div>
+        <div class="today-date">
+          <span class="date-icon" aria-hidden="true">▦</span>
+          <div>
+            <span class="small-label">TODAY</span>
+            <p id="date-label">今天</p>
           </div>
-          <div class="spotlight"></div>
-          <p class="sleep-note">冬眠</p>
         </div>
-        <svg class="monster" id="monster" viewBox="0 0 280 320">
-          <title>喝水怪獸</title>
-          <ellipse class="shadow" cx="150" cy="292" rx="78" ry="12" />
-          <path class="tail" d="M96 214 C58 206 24 228 30 258 C36 278 66 276 82 256 C94 240 104 230 118 222 Z" />
-          <g class="plates plates-back">
-            <path transform="translate(118 176) scale(0.55)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
-            <path transform="translate(162 176) scale(0.55)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
-          </g>
-          <ellipse class="leg" cx="112" cy="262" rx="30" ry="24" />
-          <ellipse class="leg" cx="186" cy="262" rx="30" ry="24" />
-          <path class="claw" d="M90 276 h10 l-2 10 Z M104 280 h10 l-2 10 Z M118 276 h10 l-2 8 Z" />
-          <path class="claw" d="M164 276 h10 l-2 10 Z M178 280 h10 l-2 10 Z M192 276 h10 l-2 8 Z" />
-          <path class="hide" d="M140 118 C186 120 208 154 206 190 C204 230 182 258 140 262 C98 258 76 230 74 190 C72 154 94 120 140 118 Z" />
-          <ellipse class="hide-spot" cx="168" cy="176" rx="10" ry="7" />
-          <ellipse class="hide-spot" cx="108" cy="198" rx="8" ry="6" />
-          <g id="belly">
-            <ellipse class="belly-main" cx="140" cy="206" rx="40" ry="32" />
-            <path class="belly-seam" d="M114 198 Q140 208 166 198" />
-            <path class="belly-seam" d="M118 216 Q140 226 162 216" />
-          </g>
-          <g class="arms">
-            <path class="arm" d="M84 156 C64 142 38 150 34 170 C30 192 48 206 70 198 C86 192 96 176 92 162 Z" />
-            <path class="hand-claw" d="M32 162 l-16 -4 12 8 Z M28 174 l-18 2 14 8 Z M34 186 l-14 8 12 2 Z" />
-            <path class="arm" d="M196 156 C216 142 242 150 246 170 C250 192 232 206 210 198 C194 192 184 176 188 162 Z" />
-            <path class="hand-claw" d="M248 162 l16 -4 -12 8 Z M252 174 l18 2 -14 8 Z M246 186 l14 8 -12 2 Z" />
-          </g>
-          <g class="plates">
-            <path transform="translate(108 92) scale(1.05)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
-            <path transform="translate(172 92) scale(1.05)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
-            <path transform="translate(140 78) scale(1.45)" d="M0-34 8-12 18-20 14-2 8 8 0 2-8 8-14-2-18-20-8-12Z" />
-          </g>
-          <g class="head">
-            <ellipse class="cranium" cx="140" cy="104" rx="52" ry="42" />
-            <ellipse class="snout" cx="140" cy="126" rx="36" ry="24" />
-            <ellipse class="shine" cx="118" cy="86" rx="16" ry="8" />
-            <path class="brow" d="M96 92 Q112 74 130 90" />
-            <path class="brow" d="M184 92 Q168 74 150 90" />
-            <g class="eyes-open">
-              <ellipse class="eye" cx="116" cy="102" rx="8" ry="7" />
-              <ellipse class="eye" cx="164" cy="102" rx="8" ry="7" />
-              <ellipse class="pupil" cx="116" cy="103" rx="3.2" ry="3.4" />
-              <ellipse class="pupil" cx="164" cy="103" rx="3.2" ry="3.4" />
-            </g>
-            <g class="eyes-shut">
-              <path d="M104 104 Q116 112 128 104" />
-              <path d="M152 104 Q164 112 176 104" />
-            </g>
-            <ellipse class="nostril" cx="128" cy="124" rx="3" ry="2" />
-            <ellipse class="nostril" cx="152" cy="124" rx="3" ry="2" />
-            <path class="mouth-pit" d="M112 128 h56 v12 q-28 18-56 0 Z" />
-            <g class="jaw">
-              <path d="M106 126 Q140 162 174 126 Q156 138 140 140 Q124 138 106 126 Z" />
-              <path class="tooth" d="M118 128 h8 l-2 7 Z M134 130 h8 l-2 7 Z M150 128 h8 l-2 7 Z" />
-            </g>
-          </g>
-          <g class="beam">
-            <path class="beam-glow" d="M166 128 L236 86 L214 126 L274 108 L262 164 L206 150 L166 152 Z" />
-            <path class="beam-core" d="M168 134 L228 112 L246 132 L220 142 L168 144 Z" />
-          </g>
-          <g class="beam-red">
-            <path class="beam-red-glow" d="M158 118 L248 28 L214 96 L318 48 L300 196 L196 168 L154 164 Z" />
-            <path class="beam-red-core" d="M164 126 L236 62 L270 108 L236 132 L164 150 Z" />
-          </g>
-        </svg>
       </section>
 
-      <section class="stats">
-        <p class="score"><span id="bottle-count">0</span><small>瓶已喝</small></p>
-        <p class="ml" id="ml-line">0 / 3000 cc</p>
-        <div
-          class="bar"
-          id="progress"
-          role="progressbar"
-          aria-valuemin="0"
-          aria-valuemax="3000"
-          aria-valuenow="0"
-          aria-label="今天喝水進度"
-        >
-          <div class="bar-fill" id="bar-fill"></div>
+      <div class="game-layout">
+        <section class="game-card" aria-labelledby="game-title">
+          <div class="game-card-top">
+            <h2 id="game-title"><span class="live-dot"></span> 怪獸補水站</h2>
+            <span class="arcade-label">DAILY ADVENTURE <span>01</span></span>
+          </div>
+          <div class="scene-wrap">
+            <canvas id="scene" width="384" height="224">像素哥吉拉喝水場景</canvas>
+            <div class="scene-topline">
+              <span class="scene-location">TOKYO BAY<br /><small>像素海灣 · 今日冒險</small></span>
+              <span class="scene-status" id="scene-status"><span></span>準備好補水了</span>
+            </div>
+            <p class="sleep-note" id="sleep-note">冬眠</p>
+            <div class="scene-bottomline">
+              <span class="monster-name">GODZILLA <span>哥吉拉</span></span>
+              <span class="heat-display">HEAT <b id="heat-label">0%</b><span class="heat-track"><i id="heat-fill"></i></span></span>
+            </div>
+          </div>
+          <div class="game-controls">
+            <div class="game-message">
+              <span class="message-square"></span>
+              <p id="live" role="status" aria-live="polite">今天 0 瓶，0 cc，還差 3000 cc</p>
+            </div>
+            <div class="action-row">
+              <button type="button" class="drink-button" id="add">
+                <svg viewBox="0 0 24 28" aria-hidden="true"><path d="M10 1h4v4h3v5h3v4h3v9h-4v4H5v-4H1v-9h3v-4h3V5h3V1Z" fill="currentColor"/><path d="M5 15h3v7h5v2H5v-9Z" fill="white" fill-opacity=".55"/></svg>
+                <span id="add-label">喝了一瓶</span>
+                <span class="button-dose">＋575 ml</span>
+                <span class="button-arrow">↗</span>
+              </button>
+              <button type="button" class="undo-button" id="undo" disabled>↶ 收回一瓶</button>
+            </div>
+            <button type="button" class="reset-button" id="reset" disabled>重新計算</button>
+            <p class="control-note">重新計算只清今天，過去的紀錄會留在這台裝置。<span>每瓶 575 ml</span></p>
+          </div>
+        </section>
+
+        <aside class="stats-column">
+          <section class="water-card" aria-labelledby="water-title">
+            <div class="card-heading">
+              <h2 id="water-title">今日喝水量</h2>
+              <span class="water-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 28"><path d="M10 1h4v4h3v5h3v4h3v9h-4v4H5v-4H1v-9h3v-4h3V5h3V1Z" fill="currentColor"/></svg>
+              </span>
+            </div>
+            <div class="water-number"><span id="ml-total">0</span><span>ml</span></div>
+            <p class="water-reference">每日參考量 <strong>3,000 ml</strong></p>
+            <div class="water-progress" id="progress" role="progressbar" aria-label="今天喝水進度" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="0">
+              <span id="bar-fill"></span>
+            </div>
+            <div class="water-progress-label">
+              <span id="remain">距參考量還有 3,000 ml</span>
+              <b id="progress-percent">0%</b>
+            </div>
+          </section>
+
+          <section class="bottle-card" aria-labelledby="bottle-title">
+            <div class="card-heading">
+              <h2 id="bottle-title">今日遊戲進度</h2>
+              <span class="bottle-counter"><strong id="bottle-count">0</strong><span>/ 10 瓶</span></span>
+            </div>
+            <div class="bottle-grid" id="bottle-grid" aria-label="已記錄 0 瓶，共 10 格"></div>
+            <div class="milestones">
+              <span id="mile-five">5 瓶・藍火與左樓倒下</span>
+              <span id="mile-ten">10 瓶・紅火與高樓全倒</span>
+            </div>
+            <p class="bottle-footnote" id="bottle-label">10 格會隨瓶數填滿 · 超過 10 瓶進入冬眠</p>
+          </section>
+        </aside>
+      </div>
+
+      <section class="evolution-strip" aria-label="哥吉拉階段">
+        <div class="evolution-title"><span class="small-label">LEVEL UP</span><h2>每一瓶，<br />都有新變化。</h2></div>
+        <div class="evolution-step current" id="step-charge">
+          <span class="step-icon mint" aria-hidden="true">01</span>
+          <div><span class="step-range">01 — 04 瓶</span><h3>慢慢蓄力</h3><p>左邊高樓逐漸裂開</p></div>
         </div>
-        <p class="remain" id="remain">還差 3000 cc</p>
-        <p class="sr-only" id="live" aria-live="polite"></p>
+        <span class="step-connector">···</span>
+        <div class="evolution-step" id="step-awake">
+          <span class="step-icon peach" aria-hidden="true">05</span>
+          <div><span class="step-range">05 — 09 瓶</span><h3>火焰覺醒</h3><p>左樓倒下，身體逐漸變紅</p></div>
+        </div>
+        <span class="step-connector">···</span>
+        <div class="evolution-step" id="step-rage">
+          <span class="step-icon red" aria-hidden="true">10</span>
+          <div><span class="step-range" id="step-final-range">10 瓶</span><h3 id="step-final-title">紅蓮爆發</h3><p id="step-final-copy">高樓全倒，噴出紅火</p></div>
+        </div>
       </section>
 
-      <section class="bottles" aria-label="今天的五瓶水">
-        <p class="bottles-label" id="bottle-label">還有 5 瓶</p>
-        <ol id="bottle-row"></ol>
-      </section>
+      <div class="records-heading" id="records">
+        <div>
+          <p class="eyebrow">YOUR HYDRATION JOURNEY</p>
+          <h2>小小紀錄，慢慢累積。</h2>
+        </div>
+        <span id="week-total">合計 0 ml</span>
+      </div>
+      <div class="records-grid">
+        <section class="history-card" aria-labelledby="history-title">
+          <div class="card-heading">
+            <h3 id="history-title">近 7 日喝水量</h3>
+          </div>
+          <div class="chart">
+            <div class="chart-plot" id="chart"></div>
+          </div>
+          <div class="chart-legend"><span><i></i>每日喝水量</span><span><i class="dashed"></i>每日參考量</span></div>
+        </section>
+        <section class="log-card" aria-labelledby="log-title">
+          <div class="card-heading">
+            <h3 id="log-title">今日補水紀錄</h3>
+            <span class="log-count" id="log-count">0 筆</span>
+          </div>
+          <div id="today-log"></div>
+          <p class="log-note">紀錄存在這台裝置，重新計算只清今天</p>
+        </section>
+      </div>
 
-      <section class="history">
-        <h2>最近 7 天</h2>
-        <ol class="week" id="week"></ol>
-      </section>
-
-      <section class="actions">
-        <button type="button" class="btn btn-reset" id="reset" disabled>重新計算</button>
-        <button type="button" class="btn btn-undo" id="undo" disabled>收回一瓶</button>
-        <button type="button" class="btn btn-add" id="add">喝了一瓶</button>
-      </section>
+      <footer class="site-footer">
+        <span class="footer-brand">慢慢喝水，好好生活。</span>
+        <span class="save-status"><i></i>紀錄儲存於此瀏覽器</span>
+        <span class="footer-edition">PIXEL EDITION</span>
+      </footer>
     </main>
     <script src="app.js" defer></script>
   </body>
